@@ -257,10 +257,15 @@ h3 {
   min-height: 260px;
 }
 
-.project-card a {
+.project-card > a {
   margin-top: auto;
   padding-top: 24px;
   font-weight: 700;
+}
+
+.project-card .hero-actions {
+  margin-top: auto;
+  padding-top: 24px;
 }
 
 .large-copy {
