@@ -1,0 +1,23 @@
+# Rakesh Randeria
+
+> Sydney-based technology executive focused on IT strategy, cybersecurity, AI governance, data governance, digital enablement and operational resilience.
+
+## Core pages
+
+- https://rakeshranderia.com.au/
+- https://rakeshranderia.com.au/rakesh-randeria.html
+- https://rakeshranderia.com.au/technology-leadership.html
+- https://rakeshranderia.com.au/cybersecurity.html
+- https://rakeshranderia.com.au/ai-governance.html
+- https://rakeshranderia.com.au/resources.html
+- https://rakeshranderia.com.au/writing.html
+
+## Technical work
+
+- https://github.com/rakeshranderia
+- https://huggingface.co/rakeshranderia
+
+## Identity
+
+- https://www.linkedin.com/in/rakeshranderia/
+- https://orcid.org/0009-0005-7368-7709
