@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-AU"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>When to Delay a Go-Live | Rakesh Randeria</title>
+<meta name="description" content="A concise case study on readiness gates, transparent escalation and why protecting a business outcome matters more than defending an arbitrary go-live date.">
+<meta name="author" content="Rakesh Randeria"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://rakeshranderia.com.au/when-to-delay-a-go-live.html">
+<meta property="og:type" content="article"><meta property="og:title" content="When to Delay a Go-Live">
+<meta property="og:description" content="A concise case study on readiness gates, transparent escalation and why protecting a business outcome matters more than defending an arbitrary go-live date."><meta property="og:url" content="https://rakeshranderia.com.au/when-to-delay-a-go-live.html"><meta property="og:site_name" content="Rakesh Randeria">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="When to Delay a Go-Live"><meta name="twitter:description" content="A concise case study on readiness gates, transparent escalation and why protecting a business outcome matters more than defending an arbitrary go-live date.">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "When to Delay a Go-Live",
+  "description": "A concise case study on readiness gates, transparent escalation and why protecting a business outcome matters more than defending an arbitrary go-live date.",
+  "author": {
+    "@type": "Person",
+    "@id": "https://rakeshranderia.com.au/#person",
+    "name": "Rakesh Randeria",
+    "url": "https://rakeshranderia.com.au/"
+  },
+  "mainEntityOfPage": "https://rakeshranderia.com.au/when-to-delay-a-go-live.html",
+  "url": "https://rakeshranderia.com.au/when-to-delay-a-go-live.html"
+}</script>
+<style>
+:root{--navy:#17365d;--blue:#2f5597;--pale:#eaf0f7;--pale2:#f6f8fb;--text:#23272f;--muted:#667085;--line:#d9e2f3;--white:#fff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65}a{color:var(--blue)}
+.site-header{border-bottom:1px solid var(--line);background:#fff}.nav-wrap{max-width:var(--max);margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:700;color:var(--navy);text-decoration:none}.nav-links{display:flex;flex-wrap:wrap;gap:16px;font-size:.92rem}.nav-links a{color:var(--navy);text-decoration:none}
+.hero{background:linear-gradient(180deg,#f7f9fc 0%,#fff 100%);border-bottom:1px solid var(--line)}.hero-inner{max-width:var(--max);margin:auto;padding:60px 22px 48px}.eyebrow{display:inline-block;margin-bottom:12px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}h1,h2,h3{color:var(--navy);line-height:1.2}h1{max-width:920px;margin:0 0 16px;font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.025em}.subtitle{max-width:900px;margin:0;font-size:1.15rem;color:#39465a}
+.content{max-width:var(--max);margin:auto;padding:44px 22px 70px}.summary{border-left:5px solid var(--blue);background:var(--pale);padding:20px 24px;margin-bottom:32px;border-radius:4px}.summary p{margin:0}.diagram{margin:28px 0 36px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:20px;overflow-x:auto}.diagram-title{margin:0 0 14px;color:var(--navy);font-size:1rem;font-weight:700}.lifecycle{display:grid;gap:10px;min-width:980px}.stage{padding:14px 10px;min-height:94px;border:1px solid var(--blue);background:var(--pale);border-radius:8px;text-align:center;display:flex;flex-direction:column;justify-content:center}.stage:first-child,.stage:last-child{background:var(--navy);color:white;border-color:var(--navy)}.stage strong{display:block;margin-bottom:5px}.stage span{font-size:.84rem;line-height:1.35}
+section{margin:38px 0}section h2{font-size:1.55rem;margin-bottom:10px}ul{padding-left:22px}li{margin:7px 0}.lessons{background:var(--pale2);border:1px solid var(--line);border-radius:10px;padding:20px 24px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-block;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.92rem}.primary{background:var(--navy);color:#fff}.secondary{border:1px solid var(--blue);color:var(--navy);background:#fff}
+.site-footer{border-top:1px solid var(--line);padding:28px 22px;color:var(--muted);font-size:.9rem}.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:780px){.nav-wrap{align-items:flex-start;flex-direction:column}.hero-inner{padding-top:42px}.content{padding-top:30px}}
+</style></head><body>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html">Rakesh Randeria</a><nav class="nav-links">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="technology-leadership.html">Leadership</a><a href="cybersecurity.html">Cybersecurity</a><a href="ai-governance.html">AI Governance</a><a href="resources.html">Resources</a><a href="writing.html">Writing</a><a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a>
+</nav></div></header>
+<main><div class="hero"><div class="hero-inner"><span class="eyebrow">Program Delivery &amp; Governance</span><h1>When to Delay a Go-Live</h1><p class="subtitle">A delivery-governance case study on making the uncomfortable decision before production</p></div></div>
+<div class="content"><div class="summary"><p>A concise case study on readiness gates, transparent escalation and why protecting a business outcome matters more than defending an arbitrary go-live date.</p></div>
+<div class="diagram"><p class="diagram-title">Process map</p><div class="lifecycle" style="grid-template-columns:repeat(8,minmax(115px,1fr))"><div class="stage"><strong>Detect</strong><span>Issue found<br>critical dependency</span></div>
+<div class="stage"><strong>Assess</strong><span>Business impact<br>risk / options</span></div>
+<div class="stage"><strong>Validate</strong><span>Readiness gates<br>evidence</span></div>
+<div class="stage"><strong>Escalate</strong><span>Choices and<br>consequences</span></div>
+<div class="stage"><strong>Decide</strong><span>Delay, scope<br>or proceed</span></div>
+<div class="stage"><strong>Remediate</strong><span>Vendor / team<br>recovery work</span></div>
+<div class="stage"><strong>Retest</strong><span>Prove readiness</span></div>
+<div class="stage"><strong>Launch</strong><span>Controlled<br>go-live</span></div></div></div>
+<section><h2>The situation</h2><ul><li>A CRM program was approaching go-live when a critical integration was found not to be ready and the delivery risk had not been surfaced early enough by the vendor.</li><li>The choice was to protect the date or protect the business outcome.</li></ul></section>
+<section><h2>Use objective readiness gates</h2><ul><li>Critical business processes must work end-to-end.</li><li>Required integrations must be functioning and supportable.</li><li>Data migration and reconciliation must be materially complete.</li><li>Security and role-based access must be ready.</li><li>Users and support teams must know what to do.</li><li>Rollback or contingency must be realistic.</li></ul></section>
+<section><h2>Escalate options, not drama</h2><ul><li>Proceed and explicitly accept the risk.</li><li>Reduce scope if the affected capability can be safely deferred.</li><li>Delay until the critical condition is met.</li><li>Use a temporary workaround only where it is controlled, supportable and genuinely lower risk.</li></ul></section>
+<section><h2>Manage the recovery</h2><ul><li>Separate root-cause review from immediate recovery activity.</li><li>Reset deliverables, owners, dates and acceptance evidence.</li><li>Increase reporting cadence temporarily.</li><li>Communicate the delay quickly and factually to stakeholders and affected users.</li></ul></section>
+<section class="lessons"><h2>Key lessons</h2><ul><li>A date is not a control.</li><li>Readiness criteria should exist before the final week.</li><li>Critical integrations are business capabilities, not technical footnotes.</li><li>Transparent delay can strengthen confidence when it demonstrates control.</li></ul></section>
+<div class="actions"><a class="button primary" href="https://github.com/rakeshranderia/technology-leadership-playbooks/blob/main/docs/when-to-delay-a-go-live.md" target="_blank" rel="noopener">View detailed playbook on GitHub</a><a class="button secondary" href="resources.html">Back to Resources</a></div></div></main>
+<footer class="site-footer"><div class="footer-inner"><span>© Rakesh Randeria</span><div class="footer-links"><a href="resources.html">Resources</a><a href="rakesh-randeria.html">Professional profile</a><a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/rakeshranderia/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
+</body></html>

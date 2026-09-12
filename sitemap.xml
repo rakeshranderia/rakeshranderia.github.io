@@ -1,51 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://rakeshranderia.com.au/</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/rakesh-randeria.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/technology-leadership.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/cybersecurity.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/ai-governance.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/resources.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/writing.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/playground.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/ai-use-case-assessment.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/ai-adoption-case-study.html</loc>
-  </url>
-
-  <url>
-    <loc>https://rakeshranderia.com.au/d365-program-recovery.html</loc>
-  </url>
+  <url><loc>https://rakeshranderia.com.au/</loc></url>
+  <url><loc>https://rakeshranderia.com.au/rakesh-randeria.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/about.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/technology-leadership.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/cybersecurity.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/ai-governance.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/resources.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/writing.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/playground.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/ai-use-case-assessment.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/ai-adoption-case-study.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/d365-program-recovery.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/technology-ma-integration-divestment.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/technology-estate-rationalisation.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/when-to-delay-a-go-live.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/technology-insourcing-capability-transition.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/major-incident-operational-resilience.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/project-delivery-waterfall-agile-mvp.html</loc></url>
+  <url><loc>https://rakeshranderia.com.au/documentation-as-operational-control.html</loc></url>
 </urlset>

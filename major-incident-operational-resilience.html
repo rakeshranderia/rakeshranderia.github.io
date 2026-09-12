@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-AU"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Major Incident &amp; Operational Resilience | Rakesh Randeria</title>
+<meta name="description" content="A resilience case study and reusable incident-management model covering prioritised recovery, communication, BCP, post-incident learning and risk transfer.">
+<meta name="author" content="Rakesh Randeria"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://rakeshranderia.com.au/major-incident-operational-resilience.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Major Incident &amp; Operational Resilience">
+<meta property="og:description" content="A resilience case study and reusable incident-management model covering prioritised recovery, communication, BCP, post-incident learning and risk transfer."><meta property="og:url" content="https://rakeshranderia.com.au/major-incident-operational-resilience.html"><meta property="og:site_name" content="Rakesh Randeria">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Major Incident &amp; Operational Resilience"><meta name="twitter:description" content="A resilience case study and reusable incident-management model covering prioritised recovery, communication, BCP, post-incident learning and risk transfer.">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Major Incident & Operational Resilience",
+  "description": "A resilience case study and reusable incident-management model covering prioritised recovery, communication, BCP, post-incident learning and risk transfer.",
+  "author": {
+    "@type": "Person",
+    "@id": "https://rakeshranderia.com.au/#person",
+    "name": "Rakesh Randeria",
+    "url": "https://rakeshranderia.com.au/"
+  },
+  "mainEntityOfPage": "https://rakeshranderia.com.au/major-incident-operational-resilience.html",
+  "url": "https://rakeshranderia.com.au/major-incident-operational-resilience.html"
+}</script>
+<style>
+:root{--navy:#17365d;--blue:#2f5597;--pale:#eaf0f7;--pale2:#f6f8fb;--text:#23272f;--muted:#667085;--line:#d9e2f3;--white:#fff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65}a{color:var(--blue)}
+.site-header{border-bottom:1px solid var(--line);background:#fff}.nav-wrap{max-width:var(--max);margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:700;color:var(--navy);text-decoration:none}.nav-links{display:flex;flex-wrap:wrap;gap:16px;font-size:.92rem}.nav-links a{color:var(--navy);text-decoration:none}
+.hero{background:linear-gradient(180deg,#f7f9fc 0%,#fff 100%);border-bottom:1px solid var(--line)}.hero-inner{max-width:var(--max);margin:auto;padding:60px 22px 48px}.eyebrow{display:inline-block;margin-bottom:12px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}h1,h2,h3{color:var(--navy);line-height:1.2}h1{max-width:920px;margin:0 0 16px;font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.025em}.subtitle{max-width:900px;margin:0;font-size:1.15rem;color:#39465a}
+.content{max-width:var(--max);margin:auto;padding:44px 22px 70px}.summary{border-left:5px solid var(--blue);background:var(--pale);padding:20px 24px;margin-bottom:32px;border-radius:4px}.summary p{margin:0}.diagram{margin:28px 0 36px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:20px;overflow-x:auto}.diagram-title{margin:0 0 14px;color:var(--navy);font-size:1rem;font-weight:700}.lifecycle{display:grid;gap:10px;min-width:980px}.stage{padding:14px 10px;min-height:94px;border:1px solid var(--blue);background:var(--pale);border-radius:8px;text-align:center;display:flex;flex-direction:column;justify-content:center}.stage:first-child,.stage:last-child{background:var(--navy);color:white;border-color:var(--navy)}.stage strong{display:block;margin-bottom:5px}.stage span{font-size:.84rem;line-height:1.35}
+section{margin:38px 0}section h2{font-size:1.55rem;margin-bottom:10px}ul{padding-left:22px}li{margin:7px 0}.lessons{background:var(--pale2);border:1px solid var(--line);border-radius:10px;padding:20px 24px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-block;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.92rem}.primary{background:var(--navy);color:#fff}.secondary{border:1px solid var(--blue);color:var(--navy);background:#fff}
+.site-footer{border-top:1px solid var(--line);padding:28px 22px;color:var(--muted);font-size:.9rem}.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:780px){.nav-wrap{align-items:flex-start;flex-direction:column}.hero-inner{padding-top:42px}.content{padding-top:30px}}
+</style></head><body>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html">Rakesh Randeria</a><nav class="nav-links">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="technology-leadership.html">Leadership</a><a href="cybersecurity.html">Cybersecurity</a><a href="ai-governance.html">AI Governance</a><a href="resources.html">Resources</a><a href="writing.html">Writing</a><a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a>
+</nav></div></header>
+<main><div class="hero"><div class="hero-inner"><span class="eyebrow">Risk, Resilience &amp; Security</span><h1>Major Incident &amp; Operational Resilience</h1><p class="subtitle">A practical playbook for rapid recovery, executive communication and post-incident learning</p></div></div>
+<div class="content"><div class="summary"><p>A resilience case study and reusable incident-management model covering prioritised recovery, communication, BCP, post-incident learning and risk transfer.</p></div>
+<div class="diagram"><p class="diagram-title">Process map</p><div class="lifecycle" style="grid-template-columns:repeat(8,minmax(115px,1fr))"><div class="stage"><strong>Detect</strong><span>Scope / severity<br>known facts</span></div>
+<div class="stage"><strong>Triage</strong><span>Impact / priority<br>dependencies</span></div>
+<div class="stage"><strong>Mobilise</strong><span>Incident lead<br>workstreams</span></div>
+<div class="stage"><strong>Contain</strong><span>Protect critical<br>minimise spread</span></div>
+<div class="stage"><strong>Recover</strong><span>Restore in<br>business order</span></div>
+<div class="stage"><strong>Communicate</strong><span>Execs / users<br>cadence</span></div>
+<div class="stage"><strong>Validate</strong><span>Services / data<br>residual risk</span></div>
+<div class="stage"><strong>Improve</strong><span>Lessons / BCP<br>control uplift</span></div></div></div>
+<section><h2>Establish command quickly</h2><ul><li>Name an incident lead and decision path.</li><li>Separate technical recovery, business continuity and communications workstreams.</li><li>Create one operational picture of affected users, services and dependencies.</li><li>Prioritise critical business services rather than restoring technology in arbitrary order.</li></ul></section>
+<section><h2>Communicate as part of the control model</h2><ul><li>Executives need consequence, trajectory, decisions and next checkpoint.</li><li>Users need clear actions and realistic expectations.</li><li>Set a reporting cadence frequent enough to maintain trust without distracting responders.</li></ul></section>
+<section><h2>Business continuity during recovery</h2><ul><li>Use manual or alternate processes where critical services can operate safely without normal technology.</li><li>Track where workarounds introduce privacy, control or reconciliation risk.</li><li>Plan the transition back to normal operation so temporary workarounds do not become permanent.</li></ul></section>
+<section><h2>Post-incident learning</h2><ul><li>Review technology dependencies, roles, BCP/DR realism, supplier response and communication effectiveness.</li><li>Assess cyber-insurance or other risk-transfer arrangements against the actual event, evidence requirements and loss thresholds.</li><li>Change plans, controls or architecture where the incident justifies it.</li></ul></section>
+<section><h2>Experience context</h2><p>The experience underpinning this piece includes leading BCP/incident response and recovery during the 19 July 2024 CrowdStrike outage, affecting most of an approximately 120-person environment across endpoints, servers and specialist compute, with rapid recovery limiting material financial loss.</p></section><section class="lessons"><h2>Key lessons</h2><ul><li>Incident leadership is prioritisation under uncertainty.</li><li>Recovery order should follow business criticality.</li><li>Communication cadence is an operational control.</li><li>BCP and DR plans become credible when tested against real events.</li></ul></section>
+<div class="actions"><a class="button primary" href="https://github.com/rakeshranderia/technology-leadership-playbooks/blob/main/docs/major-incident-operational-resilience.md" target="_blank" rel="noopener">View detailed playbook on GitHub</a><a class="button secondary" href="resources.html">Back to Resources</a></div></div></main>
+<footer class="site-footer"><div class="footer-inner"><span>© Rakesh Randeria</span><div class="footer-links"><a href="resources.html">Resources</a><a href="rakesh-randeria.html">Professional profile</a><a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/rakeshranderia/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
+</body></html>
