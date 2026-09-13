@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-AU"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Lineage & Dependency Mapping | Rakesh Randeria</title>
+<meta name="description" content="A practical data lineage framework covering provenance, transformations, interfaces, downstream dependencies, quality, access and AI consumption.">
+<meta name="author" content="Rakesh Randeria"><meta name="robots" content="index,follow">
+<link rel="canonical" href="https://rakeshranderia.com.au/data-lineage-dependency-mapping.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Data Lineage & Dependency Mapping">
+<meta property="og:description" content="A practical data lineage framework covering provenance, transformations, interfaces, downstream dependencies, quality, access and AI consumption."><meta property="og:url" content="https://rakeshranderia.com.au/data-lineage-dependency-mapping.html"><meta property="og:site_name" content="Rakesh Randeria">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Data Lineage & Dependency Mapping"><meta name="twitter:description" content="A practical data lineage framework covering provenance, transformations, interfaces, downstream dependencies, quality, access and AI consumption.">
+<script type="application/ld+json">{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Data Lineage & Dependency Mapping",
+  "description":"A practical data lineage framework covering provenance, transformations, interfaces, downstream dependencies, quality, access and AI consumption.",
+  "author":{"@type":"Person","@id":"https://rakeshranderia.com.au/#person","name":"Rakesh Randeria","url":"https://rakeshranderia.com.au/"},
+  "mainEntityOfPage":"https://rakeshranderia.com.au/data-lineage-dependency-mapping.html",
+  "url":"https://rakeshranderia.com.au/data-lineage-dependency-mapping.html"
+}</script>
+<style>
+:root{--navy:#17365d;--blue:#2f5597;--pale:#eaf0f7;--pale2:#f6f8fb;--text:#23272f;--muted:#667085;--line:#d9e2f3;--white:#fff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65}a{color:var(--blue)}
+.site-header{border-bottom:1px solid var(--line);background:#fff}.nav-wrap{max-width:var(--max);margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:700;color:var(--navy);text-decoration:none}.nav-links{display:flex;flex-wrap:wrap;gap:16px;font-size:.92rem}.nav-links a{color:var(--navy);text-decoration:none}
+.hero{background:linear-gradient(180deg,#f7f9fc 0%,#fff 100%);border-bottom:1px solid var(--line)}.hero-inner{max-width:var(--max);margin:auto;padding:60px 22px 48px}.eyebrow{display:inline-block;margin-bottom:12px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}h1,h2,h3{color:var(--navy);line-height:1.2}h1{max-width:920px;margin:0 0 16px;font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.025em}.subtitle{max-width:900px;margin:0;font-size:1.15rem;color:#39465a}
+.content{max-width:var(--max);margin:auto;padding:44px 22px 70px}.summary{border-left:5px solid var(--blue);background:var(--pale);padding:20px 24px;margin-bottom:32px;border-radius:4px}.summary p{margin:0}.diagram{margin:28px 0 36px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:20px;overflow-x:auto}.diagram-title{margin:0 0 14px;color:var(--navy);font-size:1rem;font-weight:700}.lifecycle{display:grid;gap:10px;min-width:900px}.stage{padding:14px 10px;min-height:94px;border:1px solid var(--blue);background:var(--pale);border-radius:8px;text-align:center;display:flex;flex-direction:column;justify-content:center}.stage:first-child,.stage:last-child{background:var(--navy);color:white;border-color:var(--navy)}.stage strong{display:block;margin-bottom:5px}.stage span{font-size:.84rem;line-height:1.35}
+section{margin:38px 0}section h2{font-size:1.55rem;margin-bottom:10px}ul{padding-left:22px}li{margin:7px 0}.lessons{background:var(--pale2);border:1px solid var(--line);border-radius:10px;padding:20px 24px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.button{display:inline-block;padding:10px 14px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.92rem}.primary{background:var(--navy);color:#fff}.secondary{border:1px solid var(--blue);color:var(--navy);background:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.card{border:1px solid var(--line);background:#fff;border-radius:10px;padding:20px}.card h3{margin-top:0}
+.site-footer{border-top:1px solid var(--line);padding:28px 22px;color:var(--muted);font-size:.9rem}.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:780px){.nav-wrap{align-items:flex-start;flex-direction:column}.hero-inner{padding-top:42px}.content{padding-top:30px}}
+</style></head><body>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html">Rakesh Randeria</a><nav class="nav-links">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="technology-leadership.html">Leadership</a><a href="cybersecurity.html">Cybersecurity</a><a href="ai-governance.html">AI Governance</a><a href="resources.html">Resources</a><a href="writing.html">Writing</a><a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a>
+</nav></div></header>
+<main><div class="hero"><div class="hero-inner"><span class="eyebrow">Data & AI Governance</span><h1>Data Lineage & Dependency Mapping</h1><p class="subtitle">Trace source, movement, transformation and dependency so governance follows the real data flow.</p></div></div>
+<div class="content">
+<div class="summary"><p>A practical governance and architecture model for understanding where data came from, what happened to it, where it moved and what now depends on it.</p></div>
+<div class="diagram"><p class="diagram-title">Lineage model</p><div class="lifecycle" style="grid-template-columns:repeat(7,minmax(125px,1fr))">
+<div class="stage"><strong>Source</strong><span>Origin / system<br>of record</span></div>
+<div class="stage"><strong>Ingest</strong><span>API / EDI / file<br>event / pipeline</span></div>
+<div class="stage"><strong>Transform</strong><span>Map / enrich<br>mask / calculate</span></div>
+<div class="stage"><strong>Store</strong><span>Raw / curated<br>operational</span></div>
+<div class="stage"><strong>Serve</strong><span>API / semantic<br>data product</span></div>
+<div class="stage"><strong>Consume</strong><span>Report / process<br>third party / AI</span></div>
+<div class="stage"><strong>Retain / Delete</strong><span>Archive / dispose<br>propagate deletion</span></div>
+</div></div>
+<section><h2>Lineage is more than metadata</h2><p>For important datasets, lineage supports governance, change impact, incident response, data quality, migration, system retirement, M&amp;A, divestment and AI provenance.</p></section>
+<section><h2>Capture the control context</h2><ul><li>Authoritative source and accountable owner.</li><li>Classification and interface type.</li><li>Material transformations and semantic changes.</li><li>Downstream systems, reports, third parties and AI consumers.</li><li>Quality controls, access model, retention and evidence.</li></ul></section>
+<section><h2>Use proportionate depth</h2><ul><li><strong>Business lineage</strong> for ownership and executive governance.</li><li><strong>System lineage</strong> for architecture, change, integration and operations.</li><li><strong>Technical lineage</strong> for engineering, regulated data, quality and model provenance.</li></ul></section>
+<section><h2>AI extends the lineage boundary</h2><p>Modern lineage may continue through embedding, indexing, vector stores, RAG workflows, agents, models and user outputs. Provenance, refresh, permitted use and deletion propagation become part of the same control story.</p></section>
+<section class="lessons"><h2>Core principle</h2><p><strong>You cannot govern data well if you cannot explain where it came from, what happened to it, and where it goes next.</strong></p></section>
+<div class="actions"><a class="button primary" href="https://huggingface.co/spaces/rakeshranderia/data-governance-toolkit" target="_blank" rel="noopener">Try the lineage assessment</a><a class="button secondary" href="https://github.com/rakeshranderia/data-governance-toolkit/blob/main/docs/data-lineage-dependency-mapping.md" target="_blank" rel="noopener">View detailed playbook</a><a class="button secondary" href="data-governance-toolkit.html">Back to Toolkit</a></div>
+</div></main>
+<footer class="site-footer"><div class="footer-inner"><span>© Rakesh Randeria</span><div class="footer-links"><a href="resources.html">Resources</a><a href="rakesh-randeria.html">Professional profile</a><a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/rakeshranderia/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
+</body></html>
