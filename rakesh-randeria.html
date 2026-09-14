@@ -162,7 +162,45 @@
       margin-top: auto;
     }
 
+
+    .profile-hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .profile-hero-copy {
+      max-width: none;
+    }
+
+    .profile-hero-image {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .profile-hero-image img {
+      display: block;
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 18px;
+      border: 1px solid #d9e2f3;
+      box-shadow: 0 10px 30px rgba(23, 54, 93, 0.10);
+    }
+
     @media (max-width: 900px) {
+      .profile-hero-layout {
+        grid-template-columns: minmax(0, 1fr) 210px;
+        gap: 28px;
+      }
+
+      .profile-hero-image img {
+        width: 200px;
+        height: 200px;
+      }
+
       .career-timeline {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -174,6 +212,20 @@
     }
 
     @media (max-width: 600px) {
+      .profile-hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-hero-image {
+        justify-content: flex-start;
+        order: -1;
+      }
+
+      .profile-hero-image img {
+        width: 180px;
+        height: 180px;
+      }
+
       .career-timeline {
         grid-template-columns: 1fr;
       }
@@ -204,21 +256,34 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <p class="eyebrow">Professional Profile</p>
-        <h1>Rakesh Randeria</h1>
-        <p class="hero-subtitle">
-          Technology Executive · Strategy · Transformation · Cybersecurity · AI &amp; Digital Enablement
-        </p>
-        <p class="hero-intro">
-          Sydney-based technology executive with 20+ years of experience progressing from
-          hands-on infrastructure and engineering through IT management, group technology
-          leadership and executive technology and information-security roles.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="technology-leadership.html">Technology Leadership</a>
-          <a class="button secondary" href="resources.html">Resources</a>
+    <section class="hero profile-hero">
+      <div class="container profile-hero-layout">
+        <div class="hero-content profile-hero-copy">
+          <p class="eyebrow">Professional Profile</p>
+          <h1>Rakesh Randeria</h1>
+          <p class="hero-subtitle">
+            Technology Executive · Strategy · Transformation · Cybersecurity · AI &amp; Digital Enablement
+          </p>
+          <p class="hero-intro">
+            Sydney-based technology executive with 20+ years of experience progressing from
+            hands-on infrastructure and engineering through IT management, group technology
+            leadership and executive technology and information-security roles.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="technology-leadership.html">Technology Leadership</a>
+            <a class="button secondary" href="resources.html">Resources</a>
+          </div>
+        </div>
+
+        <div class="profile-hero-image">
+          <img
+            src="rakesh-randeria-headshot.jpg"
+            alt="Rakesh Randeria"
+            width="240"
+            height="240"
+            loading="eager"
+            decoding="async"
+          >
         </div>
       </div>
     </section>
