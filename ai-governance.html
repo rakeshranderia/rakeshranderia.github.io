@@ -8,10 +8,164 @@
 
   <meta
     name="description"
-    content="Practical AI governance covering responsible adoption, business use cases, risk, data protection and enterprise AI enablement."
+    content="Practical AI governance covering use-case assessment, data governance, platform risk, human oversight, responsible adoption and enterprise AI enablement."
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .ai-flow {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .ai-step {
+      position: relative;
+      border: 1px solid #d9e2f3;
+      border-radius: 10px;
+      padding: 18px 14px;
+      background: #ffffff;
+      min-height: 142px;
+    }
+
+    .ai-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #2f5597;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .ai-step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      background: #17365d;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .ai-step h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: #17365d;
+    }
+
+    .ai-step p {
+      margin: 0;
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .tool-card {
+      border: 1px solid #d9e2f3;
+      border-radius: 12px;
+      padding: 24px;
+      background: #ffffff;
+    }
+
+    .tool-card h3 {
+      margin-top: 0;
+      color: #17365d;
+    }
+
+    .tool-card .hero-actions {
+      margin-top: 20px;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .decision-card {
+      border: 1px solid #d9e2f3;
+      border-radius: 10px;
+      padding: 18px;
+      background: #ffffff;
+    }
+
+    .decision-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #17365d;
+    }
+
+    .decision-card p {
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    .governance-chain {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .governance-chain div {
+      border: 1px solid #d9e2f3;
+      border-radius: 8px;
+      padding: 14px 10px;
+      background: #f6f8fb;
+      text-align: center;
+      color: #17365d;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 980px) {
+      .ai-flow {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .ai-step:nth-child(3)::after,
+      .ai-step:nth-child(6)::after {
+        display: none;
+      }
+
+      .governance-chain {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .tool-grid,
+      .decision-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .ai-flow,
+      .governance-chain {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-step::after {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -42,140 +196,227 @@
         <h1>The default answer to AI does not need to be no.</h1>
 
         <p class="hero-intro">
-          Organisations need a consistent way to experiment with and adopt AI without
-          allowing it to become unmanaged Shadow IT.
+          Organisations need a repeatable way to evaluate AI use cases, understand the
+          data and platform involved, apply proportionate controls and make deliberate
+          decisions without allowing AI adoption to become unmanaged Shadow IT.
         </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#assessment">See the assessment model</a>
+          <a class="button secondary" href="#tools">Launch live tools</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="assessment" class="section">
+      <div class="container">
+        <p class="section-label">Assessment Model</p>
+
+        <div class="section-heading">
+          <h2>Govern the use case, not just the product name.</h2>
+          <p>
+            New AI capabilities will keep appearing. A durable governance model should work
+            across platforms by asking the same core questions in a consistent order.
+          </p>
+        </div>
+
+        <div class="ai-flow" aria-label="AI use-case governance flow">
+          <div class="ai-step">
+            <span class="ai-step-number">1</span>
+            <h3>Use Case</h3>
+            <p>What problem is being solved and who owns the outcome?</p>
+          </div>
+
+          <div class="ai-step">
+            <span class="ai-step-number">2</span>
+            <h3>Data</h3>
+            <p>What information will be received, processed, retained or exposed?</p>
+          </div>
+
+          <div class="ai-step">
+            <span class="ai-step-number">3</span>
+            <h3>Platform</h3>
+            <p>Is the service approved and are supplier, privacy and access risks understood?</p>
+          </div>
+
+          <div class="ai-step">
+            <span class="ai-step-number">4</span>
+            <h3>Impact</h3>
+            <p>Could failure, bias or misuse materially affect people or the organisation?</p>
+          </div>
+
+          <div class="ai-step">
+            <span class="ai-step-number">5</span>
+            <h3>Controls</h3>
+            <p>Are oversight, security, testing, monitoring and acceptable-use controls adequate?</p>
+          </div>
+
+          <div class="ai-step">
+            <span class="ai-step-number">6</span>
+            <h3>Decision</h3>
+            <p>Proceed, proceed with controls, assess further or do not proceed.</p>
+          </div>
+
+          <div class="ai-step">
+            <span class="ai-step-number">7</span>
+            <h3>Review</h3>
+            <p>Reassess when the model, data, purpose, users or risk materially change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section alt">
+      <div class="container">
+        <p class="section-label">Live Tools</p>
+
+        <div class="section-heading">
+          <h2>Turn the governance model into a practical conversation.</h2>
+          <p>
+            The tools below are lightweight browser-based assessments designed to help teams
+            structure early decisions before moving into detailed legal, privacy, security or risk review.
+          </p>
+        </div>
+
+        <div class="tool-grid">
+          <article class="tool-card">
+            <p class="project-type">AI Governance · Live Assessment</p>
+            <h3>AI Use-Case Assessment</h3>
+            <p>
+              Screens an AI use case across business purpose, data classification, platform
+              status, impact, human oversight and core controls.
+            </p>
+            <p>
+              The result is a governance screening outcome, not an automated approval.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="https://huggingface.co/spaces/rakeshranderia/ai-use-case-assessment" target="_blank" rel="noopener">
+                Launch assessment
+              </a>
+              <a class="button secondary" href="ai-use-case-assessment.html">
+                Supporting resource
+              </a>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <p class="project-type">Responsible AI · Live Assessment</p>
+            <h3>Responsible AI Readiness</h3>
+            <p>
+              A broader readiness check covering governance, data, approved platforms,
+              acceptable use, human oversight, testing, monitoring and Shadow AI.
+            </p>
+            <p>
+              Useful for assessing whether the organisation has the surrounding controls
+              needed to scale AI safely.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="https://huggingface.co/spaces/rakeshranderia/responsible-ai-readiness" target="_blank" rel="noopener">
+                Launch assessment
+              </a>
+              <a class="button secondary" href="https://github.com/rakeshranderia/responsible-ai-readiness" target="_blank" rel="noopener">
+                View source
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container narrow">
-
-        <p class="section-label">Assessment</p>
-
-        <h2>A simple starting point.</h2>
-
-        <p class="large-copy">
-          Use Case + Data + Risk + Platform
-        </p>
-
-        <p>
-          Rather than creating governance around individual product names, I prefer an
-          approach that can be applied consistently as new AI capabilities appear.
-        </p>
-
-      </div>
-    </section>
-
-    <section class="section alt">
       <div class="container">
+        <p class="section-label">Decision Outcomes</p>
 
-        <div class="cards four">
-
-          <article class="card">
-            <h3>Use Case</h3>
-            <p>
-              What is the employee or business function actually trying to achieve?
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Data</h3>
-            <p>
-              What information will the AI service receive, process or potentially
-              expose?
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Risk</h3>
-            <p>
-              What could happen if the information, model or output is incorrect,
-              exposed or misused?
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Platform</h3>
-            <p>
-              What security, privacy, access, enterprise and monitoring controls are
-              available?
-            </p>
-          </article>
-
+        <div class="section-heading">
+          <h2>Governance should help the organisation reach a clear decision.</h2>
+          <p>
+            The objective is not to make every use case risk-free. It is to make the decision
+            deliberate, proportionate, documented and owned.
+          </p>
         </div>
 
+        <div class="decision-grid">
+          <div class="decision-card">
+            <strong>Proceed</strong>
+            <p>Low-risk use case with adequate existing controls.</p>
+          </div>
+
+          <div class="decision-card">
+            <strong>Proceed with controls</strong>
+            <p>Acceptable once defined controls or conditions are implemented and owned.</p>
+          </div>
+
+          <div class="decision-card">
+            <strong>Further assessment required</strong>
+            <p>Material uncertainty or elevated impact requires specialist review.</p>
+          </div>
+
+          <div class="decision-card">
+            <strong>Do not proceed</strong>
+            <p>Current risk cannot be reduced to an acceptable level or conflicts with requirements.</p>
+          </div>
+        </div>
       </div>
     </section>
-
 
     <section class="section alt">
       <div class="container narrow">
         <p class="section-label">Data + AI Governance</p>
         <h2>Responsible AI starts with governed data.</h2>
+
         <p>
-          AI governance becomes much more practical when ownership, quality,
-          classification, access and lifecycle are already understood. Rather than
-          creating a separate governance silo, I treat Responsible AI as an extension
-          of the underlying data-governance model.
+          AI governance becomes more practical when ownership, quality, classification,
+          access, lineage and lifecycle are already understood. Rather than building a
+          separate governance silo, Responsible AI can extend the underlying data-governance model.
         </p>
-        <p class="large-copy">
-          Data Governance → Trusted Data → AI Readiness → Responsible AI → Measurement → Scale
-        </p>
-        <p>
-          Governance is then carried into adoption: establish practical guardrails,
-          pilot real use cases, measure behaviour and value, and scale proportionately.
-        </p>
+
+        <div class="governance-chain" aria-label="Data governance to responsible AI lifecycle">
+          <div>Data Governance</div>
+          <div>Trusted Data</div>
+          <div>AI Readiness</div>
+          <div>Responsible AI</div>
+          <div>Measurement</div>
+          <div>Scale</div>
+        </div>
+
         <div class="hero-actions">
-          <a class="button secondary" href="https://github.com/rakeshranderia/data-governance-framework" target="_blank" rel="noopener">
+          <a class="button primary" href="https://github.com/rakeshranderia/data-governance-framework" target="_blank" rel="noopener">
             Data Governance + Responsible AI
           </a>
+
           <a class="button secondary" href="https://github.com/rakeshranderia/governed-ai-adoption" target="_blank" rel="noopener">
             Governed AI Adoption
           </a>
-          <a class="button secondary" href="https://huggingface.co/spaces/rakeshranderia/responsible-ai-readiness" target="_blank" rel="noopener">
-            Responsible AI Readiness — Live Assessment
+
+          <a class="button secondary" href="https://github.com/rakeshranderia/ai-governance-framework" target="_blank" rel="noopener">
+            AI Governance Framework
           </a>
         </div>
       </div>
     </section>
+
     <section class="section">
       <div class="container narrow">
-
         <p class="section-label">Governance Philosophy</p>
 
         <h2>Enable informed decisions.</h2>
 
         <p>
-          The objective of governance should not be to become the department that says
-          no to AI.
+          The objective of governance should not be to become the department that says no to AI.
+          It should provide enough structure that the organisation can reach a consistent and
+          informed yes, no or yes-with-controls decision.
         </p>
 
         <p>
-          It should provide enough structure that the organisation can reach a
-          consistent and informed yes, no or yes-with-controls decision.
+          That means applying more governance where the consequences are higher, keeping
+          low-risk experimentation proportionate, and maintaining clear ownership for the
+          controls, exceptions and ongoing review that matter.
         </p>
 
         <div class="hero-actions">
-          <a
-            class="button primary"
-            href="https://github.com/rakeshranderia/ai-governance-framework"
-            target="_blank"
-            rel="noopener"
-          >
-            AI Governance Framework
-          </a>
-
-          <a
-            class="button secondary"
-            href="https://github.com/rakeshranderia/governed-ai-adoption"
-            target="_blank"
-            rel="noopener"
-          >
-            Governed AI Adoption Case Study
-          </a>
+          <a class="button primary" href="resources.html">Explore AI resources</a>
+          <a class="button secondary" href="writing.html">Selected writing</a>
         </div>
-
       </div>
     </section>
 
@@ -186,8 +427,10 @@
       <p>© Rakesh Randeria</p>
 
       <div class="footer-links">
+        <a href="index.html">Home</a>
         <a href="resources.html">Resources</a>
         <a href="writing.html">Writing</a>
+        <a href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
