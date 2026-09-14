@@ -72,6 +72,99 @@
     ]
   }
   </script>
+
+  <style>
+    .leadership-flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .leadership-step {
+      position: relative;
+      border: 1px solid #d9e2f3;
+      border-radius: 10px;
+      padding: 18px 14px;
+      background: #ffffff;
+      min-height: 138px;
+    }
+
+    .leadership-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #2f5597;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      background: #17365d;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .leadership-step h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .leadership-step p {
+      margin: 0;
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .selected-work .card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .selected-work .card a {
+      margin-top: auto;
+    }
+
+    .home-cta {
+      text-align: center;
+    }
+
+    .home-cta .hero-actions {
+      justify-content: center;
+    }
+
+    @media (max-width: 980px) {
+      .leadership-flow {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .leadership-step:nth-child(3)::after,
+      .leadership-step:nth-child(6)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .leadership-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-step::after {
+        display: none !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -101,45 +194,13 @@
           Strategy · Transformation · Cybersecurity · AI &amp; Digital Enablement
         </p>
         <p class="hero-intro">
-          Rakesh Randeria is a Sydney-based technology executive with 20+ years of
-          experience across IT strategy, transformation, cybersecurity, AI governance,
-          digital enablement and operational resilience. His background spans hands-on
-          engineering through enterprise technology and security leadership, with a
-          focus on practical business outcomes, secure technology delivery and
-          sustainable operating models.
+          Sydney-based technology executive with 20+ years of experience connecting
+          business strategy, secure technology delivery, operational resilience and
+          practical transformation.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#work">Explore my work</a>
+          <a class="button primary" href="#work">Explore selected work</a>
           <a class="button secondary" href="rakesh-randeria.html">Professional Profile</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container narrow">
-        <p class="section-label">About</p>
-        <h2>Technology leadership that stays connected to the technology.</h2>
-        <p>
-          My career has progressed from hands-on infrastructure and engineering roles
-          through IT management to broader technology leadership across strategy,
-          operations, cybersecurity, transformation and emerging technology.
-        </p>
-        <p>
-          I have generally worked in environments where technology leaders need to
-          operate at two levels: setting direction with executives and the Board while
-          remaining close enough to the technology to understand how it is actually
-          designed, delivered and operated.
-        </p>
-        <p>I tend to come back to four questions:</p>
-        <div class="principles">
-          <div>What business problem are we trying to solve?</div>
-          <div>What is the simplest practical technology approach?</div>
-          <div>What risk are we accepting or reducing?</div>
-          <div>How will we know whether it worked?</div>
-        </div>
-        <div class="hero-actions">
-          <a class="button secondary" href="about.html">More about me</a>
-          <a class="button secondary" href="rakesh-randeria.html">Professional profile</a>
         </div>
       </div>
     </section>
@@ -148,10 +209,10 @@
       <div class="container">
         <p class="section-label">Areas of Focus</p>
         <div class="section-heading">
-          <h2>Where I spend most of my time</h2>
+          <h2>Leadership across strategy, risk, delivery and operations</h2>
           <p>
-            Strategy and governance matter, but so does understanding how technology
-            works in practice.
+            Broad enough to work across the technology environment, with enough technical
+            depth to keep decisions grounded in how services are actually delivered and operated.
           </p>
         </div>
 
@@ -159,8 +220,8 @@
           <article class="card">
             <h3>Technology Leadership</h3>
             <p>
-              Technology strategy, operating models, business partnering, investment,
-              transformation and executive decision-making.
+              Strategy, operating models, investment, business partnering, transformation
+              and executive decision-making.
             </p>
             <a href="technology-leadership.html">Explore leadership →</a>
           </article>
@@ -175,10 +236,10 @@
           </article>
 
           <article class="card">
-            <h3>AI Governance</h3>
+            <h3>AI &amp; Data Governance</h3>
             <p>
-              Responsible AI adoption, use-case assessment, data protection, governance
-              and practical experimentation.
+              Responsible AI adoption, use-case assessment, data governance, platform risk
+              and proportionate controls.
             </p>
             <a href="ai-governance.html">Explore AI governance →</a>
           </article>
@@ -186,116 +247,111 @@
           <article class="card">
             <h3>Operations &amp; Automation</h3>
             <p>
-              Reliable IT operations, service management, resilience, infrastructure
-              and practical automation.
+              Reliable IT operations, service management, resilience, infrastructure,
+              identity and practical automation.
             </p>
-            <a href="operations-automation.html">
-              Explore operations &amp; automation →
-            </a>
+            <a href="operations-automation.html">Explore operations →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section">
+    <section class="section">
       <div class="container">
-        <p class="section-label">Featured Work</p>
+        <p class="section-label">How I Work</p>
         <div class="section-heading">
-          <h2>Frameworks, case studies and practical examples</h2>
+          <h2>Keep technology connected to business outcomes</h2>
           <p>
-            GitHub is where I document some of the approaches, lessons and technical
-            examples behind my work.
+            The detail changes by organisation, but the leadership pattern is consistent:
+            understand the problem, make trade-offs visible, deliver deliberately and measure the result.
           </p>
         </div>
 
-        <div class="cards">
-          <article class="card project-card">
-            <p class="project-type">Case Studies</p>
-            <h3>Technology Leadership</h3>
-            <p>
-              Practical leadership case studies covering AI adoption, cybersecurity
-              maturity, transformation, IT/OT, business partnering and secure
-              environments.
-            </p>
-            <a href="https://github.com/rakeshranderia/technology-leadership" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
+        <div class="leadership-flow" aria-label="Technology leadership operating model">
+          <div class="leadership-step">
+            <span class="step-number">1</span>
+            <h3>Understand</h3>
+            <p>Business need, users, constraints and current-state reality.</p>
+          </div>
 
-          <article class="card project-card">
-            <p class="project-type">Framework</p>
-            <h3>Cybersecurity Framework</h3>
-            <p>
-              A practical approach to cybersecurity strategy, governance, risk,
-              resilience and security maturity.
-            </p>
-            <a href="https://github.com/rakeshranderia/cybersecurity-framework" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
+          <div class="leadership-step">
+            <span class="step-number">2</span>
+            <h3>Set Direction</h3>
+            <p>Target state, principles, architecture and practical strategy.</p>
+          </div>
 
-          <article class="card project-card">
-            <p class="project-type">Framework</p>
-            <h3>AI Governance Framework</h3>
-            <p>
-              A practical approach to governed AI adoption, data protection, risk
-              assessment and responsible enablement.
-            </p>
-            <a href="https://github.com/rakeshranderia/ai-governance-framework" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
+          <div class="leadership-step">
+            <span class="step-number">3</span>
+            <h3>Prioritise &amp; Govern</h3>
+            <p>Value, risk, capacity, ownership and decision rights.</p>
+          </div>
 
-          <article class="card project-card">
-            <p class="project-type">Playbook</p>
-            <h3>IT Operations Playbook</h3>
-            <p>
-              IT operating models, service management, resilience, vendor management,
-              roadmaps and business-led technology prioritisation.
-            </p>
-            <a href="https://github.com/rakeshranderia/it-operations-playbook" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
+          <div class="leadership-step">
+            <span class="step-number">4</span>
+            <h3>Deliver &amp; Secure</h3>
+            <p>Programs, change, controls, vendors and transparent escalation.</p>
+          </div>
 
-          <article class="card project-card">
-            <p class="project-type">Practical Examples</p>
-            <h3>Technology Automation</h3>
-            <p>
-              Practical technical knowledge, automation and control patterns across
-              identity, Microsoft 365, secure delivery, resilience, infrastructure and
-              security.
-            </p>
-            <a href="https://github.com/rakeshranderia/technology-automation" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
+          <div class="leadership-step">
+            <span class="step-number">5</span>
+            <h3>Operate &amp; Improve</h3>
+            <p>Supportability, resilience, automation and continuous improvement.</p>
+          </div>
+
+          <div class="leadership-step">
+            <span class="step-number">6</span>
+            <h3>Measure Value</h3>
+            <p>Outcomes, adoption, risk reduction, service performance and learning.</p>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <section class="section alt" id="recent-technical-library">
+    <section id="work" class="section alt selected-work">
       <div class="container">
-        <p class="section-label">Recent Technical Library</p>
+        <p class="section-label">Selected Work</p>
         <div class="section-heading">
-          <h2>Practical frameworks, automation and reference material</h2>
+          <h2>Current frameworks, case studies and practical tools</h2>
           <p>
-            Recent public work covering governed data and AI, identity lifecycle,
-            enterprise AI adoption and practical Windows administration.
+            A deliberately small selection of public work spanning technology leadership,
+            data and AI governance, program delivery and operational controls.
           </p>
         </div>
 
         <div class="cards">
           <article class="card project-card">
-            <p class="project-type">Data Governance · Responsible AI</p>
-            <h3>Data Governance + Responsible AI</h3>
+            <p class="project-type">Technology Leadership · Playbooks</p>
+            <h3>Technology Leadership Playbooks</h3>
             <p>
-              A practical operating model for data ownership, quality, access, lifecycle
-              and evidence, with Responsible AI layered over trusted data.
+              Practical, anonymised playbooks covering transformation, M&amp;A, architecture,
+              program delivery, resilience, operating models and governance.
             </p>
-            <a href="https://github.com/rakeshranderia/data-governance-framework" target="_blank" rel="noopener">
-              View repository →
+            <a href="https://github.com/rakeshranderia/technology-leadership-playbooks" target="_blank" rel="noopener">
+              Explore playbooks →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Data Governance · Toolkit</p>
+            <h3>Data Governance Toolkit</h3>
+            <p>
+              Focused guidance connecting classification, lineage and decision rights through
+              the model <strong>Classify → Trace → Govern</strong>.
+            </p>
+            <a href="data-governance-toolkit.html">
+              Explore toolkit →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Enterprise Applications · Case Study</p>
+            <h3>D365 Program Recovery</h3>
+            <p>
+              End-to-end program recovery covering requirements, governance, integration,
+              reporting, go-live, hypercare and transition to BAU.
+            </p>
+            <a href="d365-program-recovery.html">
+              Read case study →
             </a>
           </article>
 
@@ -303,11 +359,23 @@
             <p class="project-type">AI Adoption · Case Study</p>
             <h3>Governed AI Adoption</h3>
             <p>
-              An enterprise AI adoption framework and anonymised case study covering
-              governance, pilot design, enablement, measurement and responsible scale.
+              A practical enterprise adoption model connecting governance, pilot design,
+              enablement, measurement and responsible scale.
             </p>
-            <a href="https://github.com/rakeshranderia/governed-ai-adoption" target="_blank" rel="noopener">
-              View repository →
+            <a href="ai-adoption-case-study.html">
+              Read case study →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Responsible AI · Live Assessment</p>
+            <h3>AI Use-Case Assessment</h3>
+            <p>
+              Browser-based screening across data, platform risk, impact, controls and human
+              oversight before an AI use case moves further into pilot or production.
+            </p>
+            <a href="https://huggingface.co/spaces/rakeshranderia/ai-use-case-assessment" target="_blank" rel="noopener">
+              Launch assessment →
             </a>
           </article>
 
@@ -319,99 +387,26 @@
               Microsoft 365, access review, evidence and PowerShell automation.
             </p>
             <a href="https://github.com/rakeshranderia/iam-user-offboarding" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
-
-          <article class="card project-card">
-            <p class="project-type">Windows · PowerShell</p>
-            <h3>Win11 Classic Experience</h3>
-            <p>
-              Conservative PowerShell tweaks for a more familiar Windows 11 experience:
-              classic Notepad, visible tray icons and a cleaner native Start menu.
-            </p>
-            <a href="https://github.com/rakeshranderia/win11-classic-experience" target="_blank" rel="noopener">
-              View repository →
-            </a>
-          </article>
-
-          <article class="card project-card">
-            <p class="project-type">Responsible AI · Live Assessment</p>
-            <h3>Responsible AI Readiness</h3>
-            <p>
-              An interactive readiness assessment connecting governed data, AI risk,
-              human oversight and monitoring to practical adoption decisions.
-            </p>
-            <a href="https://huggingface.co/spaces/rakeshranderia/responsible-ai-readiness" target="_blank" rel="noopener">
-              Launch live assessment →
-            </a>
-          </article>
-
-          <article class="card project-card">
-            <p class="project-type">AI Governance · Medium</p>
-            <h3>From AI Governance Frameworks to Something You Can Actually Use</h3>
-            <p>
-              A practical look at turning data governance, risk, human oversight and monitoring
-              into an operational Responsible AI readiness decision.
-            </p>
-            <a href="https://rakeshranderia.medium.com/from-ai-governance-frameworks-to-something-you-can-actually-use-0cb2cfd1edf6" target="_blank" rel="noopener">
-              Read on Medium →
+              View framework →
             </a>
           </article>
         </div>
       </div>
     </section>
-    <section class="section alt">
+
+    <section class="section home-cta">
       <div class="container narrow">
         <p class="section-label">Explore</p>
-        <h2>More than repositories.</h2>
-        <p>
-          This site is the front door to practical technology leadership material,
-          resources and writing.
-        </p>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Professional Profile</h3>
-            <p>
-              A concise overview of my technology leadership background, areas of
-              experience, qualifications and public work.
-            </p>
-            <a href="rakesh-randeria.html">View professional profile →</a>
-          </article>
-
-          <article class="card">
-            <h3>Resources</h3>
-            <p>
-              Practical templates and tools covering AI governance, cybersecurity,
-              technology risk, vendors and resilience.
-            </p>
-            <a href="resources.html">Explore resources →</a>
-          </article>
-
-          <article class="card">
-            <h3>Writing</h3>
-            <p>
-              Short perspectives on technology leadership, cybersecurity, AI,
-              transformation and operations.
-            </p>
-            <a href="writing.html">Explore writing →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container narrow">
-        <p class="section-label">Perspective</p>
-        <h2>Keep it practical.</h2>
+        <h2>Practical work, selectively published.</h2>
         <p class="large-copy">
-          Technology changes quickly. Good technology leadership is more consistent.
+          The website is the executive-facing hub; GitHub holds the deeper frameworks,
+          playbooks and version history.
         </p>
-        <p class="closing-statement">
-          Understand the business. Make priorities visible. Manage risk.
-          Keep things practical. Deliver outcomes. Keep learning.
-        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="resources.html">Explore resources</a>
+          <a class="button secondary" href="writing.html">Selected writing</a>
+          <a class="button secondary" href="https://github.com/rakeshranderia" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </section>
 
