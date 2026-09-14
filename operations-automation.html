@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Operations & Automation | Rakesh Randeria</title>
+  <title>Operations &amp; Automation | Rakesh Randeria</title>
 
   <meta
     name="description"
@@ -17,10 +17,121 @@
   <link rel="stylesheet" href="style.css">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Operations & Automation | Rakesh Randeria">
+  <meta property="og:title" content="Operations &amp; Automation | Rakesh Randeria">
   <meta property="og:description" content="Practical IT operations, resilience, infrastructure and automation grounded in sustainable operating models and supportability.">
   <meta property="og:url" content="https://rakeshranderia.com.au/operations-automation.html">
   <meta property="og:site_name" content="Rakesh Randeria">
+
+  <style>
+    .operations-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .operations-step {
+      position: relative;
+      border: 1px solid #d9e2f3;
+      border-radius: 10px;
+      padding: 18px 14px;
+      background: #ffffff;
+      min-height: 150px;
+    }
+
+    .operations-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #2f5597;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .operations-step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      background: #17365d;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .operations-step h3 {
+      margin: 0 0 8px;
+      color: #17365d;
+      font-size: 1rem;
+    }
+
+    .operations-step p {
+      margin: 0;
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .operations-work .card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .operations-work .card a,
+    .operations-work .card .hero-actions {
+      margin-top: auto;
+    }
+
+    .automation-principles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .automation-principle {
+      border: 1px solid #d9e2f3;
+      border-radius: 10px;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .automation-principle h3 {
+      margin-top: 0;
+      color: #17365d;
+    }
+
+    @media (max-width: 900px) {
+      .operations-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .operations-step:nth-child(2)::after,
+      .operations-step:nth-child(4)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .automation-principles {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .operations-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .operations-step::after {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -46,35 +157,69 @@
 
     <section class="hero">
       <div class="container hero-content">
-        <p class="eyebrow">Operations & Automation</p>
+        <p class="eyebrow">Operations &amp; Automation</p>
 
         <h1>Reliable operations first. Automate where it genuinely improves the service.</h1>
 
         <p class="hero-intro">
           My approach to IT operations combines clear ownership, supportability,
-          resilience and practical automation. Automation should remove repetitive
-          work, reduce risk and improve consistency without creating a new layer of
-          complexity that nobody owns.
+          resilience and practical automation. Automation should remove repetitive work,
+          reduce risk and improve consistency without creating a new layer of complexity
+          that nobody owns.
         </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#operating-model">See the operating model</a>
+          <a class="button secondary" href="#practical-work">Explore practical work</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container narrow">
+    <section id="operating-model" class="section">
+      <div class="container">
         <p class="section-label">Operating Philosophy</p>
 
-        <h2>Automation supports the operating model; it does not replace it.</h2>
+        <div class="section-heading">
+          <h2>Automation supports the operating model; it does not replace it.</h2>
+          <p>
+            Strong operations start with knowing who owns a service, how it is supported,
+            what happens when it fails and how change is controlled. Once those basics are
+            understood, automation can make the service faster, more consistent and easier
+            to operate.
+          </p>
+        </div>
 
-        <p>
-          Strong operations start with knowing who owns a service, how it is supported,
-          what happens when it fails and how change is controlled. Once those basics are
-          understood, automation can make the service faster, more consistent and easier
-          to operate.
-        </p>
+        <div class="operations-flow" aria-label="Operations and automation lifecycle">
+          <div class="operations-step">
+            <span>1</span>
+            <h3>Understand</h3>
+            <p>Clarify the service, owner, process, dependencies, risk and support model.</p>
+          </div>
 
-        <p class="large-copy">
-          Understand → Standardise → Automate → Monitor → Improve
-        </p>
+          <div class="operations-step">
+            <span>2</span>
+            <h3>Standardise</h3>
+            <p>Reduce unnecessary variation and make the process clear enough to repeat.</p>
+          </div>
+
+          <div class="operations-step">
+            <span>3</span>
+            <h3>Automate</h3>
+            <p>Remove repetitive work where automation improves consistency, speed or control.</p>
+          </div>
+
+          <div class="operations-step">
+            <span>4</span>
+            <h3>Monitor</h3>
+            <p>Log outcomes, detect failure and keep operational ownership visible.</p>
+          </div>
+
+          <div class="operations-step">
+            <span>5</span>
+            <h3>Improve</h3>
+            <p>Use incidents, exceptions and feedback to refine the service over time.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -83,7 +228,6 @@
         <p class="section-label">Areas of Focus</p>
 
         <div class="cards four">
-
           <article class="card">
             <h3>IT Operations</h3>
             <p>
@@ -101,7 +245,7 @@
           </article>
 
           <article class="card">
-            <h3>Identity & Access</h3>
+            <h3>Identity &amp; Access</h3>
             <p>
               Joiner, mover and leaver processes, access governance, deprovisioning and
               evidence across Active Directory and Microsoft 365.
@@ -115,17 +259,56 @@
               reporting, access review and operational consistency.
             </p>
           </article>
-
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
+        <p class="section-label">Automation Principles</p>
+
+        <div class="section-heading">
+          <h2>Good automation should make the environment easier to operate.</h2>
+        </div>
+
+        <div class="automation-principles">
+          <article class="automation-principle">
+            <h3>Keep ownership visible</h3>
+            <p>
+              A script or workflow should still have a clear owner, support path and recovery process.
+            </p>
+          </article>
+
+          <article class="automation-principle">
+            <h3>Make failure observable</h3>
+            <p>
+              Logging, alerts and clear outcomes matter as much as the automation itself.
+            </p>
+          </article>
+
+          <article class="automation-principle">
+            <h3>Prefer simple over clever</h3>
+            <p>
+              Automation that only one person understands can create a new operational dependency.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="practical-work" class="section alt operations-work">
+      <div class="container">
         <p class="section-label">Practical Work</p>
 
-        <div class="cards">
+        <div class="section-heading">
+          <h2>Playbooks, automation and operational controls.</h2>
+          <p>
+            The material below focuses on repeatable operational patterns rather than
+            organisation-specific implementation detail.
+          </p>
+        </div>
 
+        <div class="cards">
           <article class="card project-card">
             <p class="project-type">Playbook</p>
             <h3>IT Operations Playbook</h3>
@@ -164,7 +347,7 @@
 
           <article class="card project-card">
             <p class="project-type">Operational Resilience</p>
-            <h3>Major Incident & Operational Resilience</h3>
+            <h3>Major Incident &amp; Operational Resilience</h3>
             <p>
               A practical incident-management model covering prioritised recovery,
               communication, business continuity and post-incident learning.
@@ -197,27 +380,29 @@
               View repository →
             </a>
           </article>
-
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section">
       <div class="container narrow">
         <p class="section-label">Principle</p>
 
         <h2>Automate the repeatable. Keep ownership visible.</h2>
 
         <p>
-          Good automation should leave the environment easier to understand and support.
-          The objective is not to maximise scripts or workflows; it is to reduce manual
+          The objective is not to maximise scripts or workflows. It is to reduce manual
           effort and risk while preserving clear accountability, logging, documentation
           and recovery paths.
         </p>
 
         <div class="hero-actions">
-          <a class="button secondary" href="resources.html">Explore resources</a>
-          <a class="button secondary" href="https://github.com/rakeshranderia/technology-automation" target="_blank" rel="noopener">Technology Automation on GitHub</a>
+          <a class="button primary" href="https://github.com/rakeshranderia/technology-automation" target="_blank" rel="noopener">
+            Technology Automation
+          </a>
+          <a class="button secondary" href="resources.html">
+            Explore Resources
+          </a>
         </div>
       </div>
     </section>
@@ -229,9 +414,10 @@
       <p>© Rakesh Randeria</p>
 
       <div class="footer-links">
+        <a href="index.html">Home</a>
         <a href="resources.html">Resources</a>
-        <a href="https://github.com/rakeshranderia/technology-automation" target="_blank" rel="noopener">Technology Automation on GitHub</a>
-        <a href="playground.html">Playground</a>
+        <a href="writing.html">Writing</a>
+        <a href="https://github.com/rakeshranderia/technology-automation" target="_blank" rel="noopener">Technology Automation</a>
       </div>
     </div>
   </footer>
