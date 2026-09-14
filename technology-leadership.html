@@ -8,10 +8,120 @@
 
   <meta
     name="description"
-    content="Technology leadership perspectives covering strategy, transformation, business partnering, IT operations and executive technology management."
+    content="Technology leadership perspectives covering strategy, business partnership, prioritisation, delivery, operations, resilience and practical transformation."
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .leadership-model {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .leadership-model-step {
+      position: relative;
+      border: 1px solid #d9e2f3;
+      border-radius: 10px;
+      padding: 18px 14px;
+      background: #ffffff;
+      min-height: 145px;
+    }
+
+    .leadership-model-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #2f5597;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .leadership-model-step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      background: #17365d;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .leadership-model-step h3 {
+      margin: 0 0 8px;
+      color: #17365d;
+      font-size: 1rem;
+    }
+
+    .leadership-model-step p {
+      margin: 0;
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .trust-chain {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .trust-chain div {
+      border: 1px solid #d9e2f3;
+      border-radius: 8px;
+      padding: 16px 12px;
+      background: #f6f8fb;
+      text-align: center;
+      color: #17365d;
+      font-weight: 700;
+    }
+
+    .leadership-work .card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .leadership-work .card a,
+    .leadership-work .card .hero-actions {
+      margin-top: auto;
+    }
+
+    @media (max-width: 980px) {
+      .leadership-model {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .leadership-model-step:nth-child(3)::after,
+      .leadership-model-step:nth-child(6)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .trust-chain {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .leadership-model,
+      .trust-chain {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-model-step::after {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -42,164 +152,264 @@
         <h1>Technology should be part of the business, not a department beside it.</h1>
 
         <p class="hero-intro">
-          My approach to technology leadership focuses on business-led priorities,
-          practical delivery, visible risk and building trust between technology and
-          the organisation.
+          My approach to technology leadership focuses on business outcomes, clear priorities,
+          practical delivery, visible risk and building enough operational credibility for
+          technology to influence strategy.
         </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#operating-model">See the operating model</a>
+          <a class="button secondary" href="#selected-work">Explore selected work</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container narrow">
+    <section id="operating-model" class="section">
+      <div class="container">
+        <p class="section-label">Leadership Operating Model</p>
 
+        <div class="section-heading">
+          <h2>Keep strategy connected to delivery and operations.</h2>
+          <p>
+            The exact shape changes by organisation, but the leadership sequence is consistent:
+            understand the business outcome, set direction, prioritise deliberately, deliver
+            with control, operate sustainably and measure whether value was actually created.
+          </p>
+        </div>
+
+        <div class="leadership-model" aria-label="Technology leadership operating model">
+          <div class="leadership-model-step">
+            <span>1</span>
+            <h3>Business Outcome</h3>
+            <p>Start with the problem, customer, process or organisational outcome that matters.</p>
+          </div>
+
+          <div class="leadership-model-step">
+            <span>2</span>
+            <h3>Strategy</h3>
+            <p>Translate the need into principles, target state, architecture and practical direction.</p>
+          </div>
+
+          <div class="leadership-model-step">
+            <span>3</span>
+            <h3>Prioritise</h3>
+            <p>Balance value, risk, cost, capacity, dependencies and strategic alignment.</p>
+          </div>
+
+          <div class="leadership-model-step">
+            <span>4</span>
+            <h3>Deliver</h3>
+            <p>Use proportionate governance, clear ownership, testing, change and transparent escalation.</p>
+          </div>
+
+          <div class="leadership-model-step">
+            <span>5</span>
+            <h3>Operate</h3>
+            <p>Design for supportability, resilience, security, ownership and continuous improvement.</p>
+          </div>
+
+          <div class="leadership-model-step">
+            <span>6</span>
+            <h3>Measure</h3>
+            <p>Track adoption, service outcomes, risk reduction, economics and lessons learned.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
         <p class="section-label">Business Partnership</p>
 
         <h2>From users to customers.</h2>
 
         <p>
-          One of the mindset changes I value is moving away from thinking about the
-          people technology supports simply as users.
+          One of the mindset changes I value is moving away from thinking about the people
+          technology supports simply as users. A user consumes a system. A customer has a
+          business need, an expectation of service and a perspective on what is important.
         </p>
 
         <p>
-          A user consumes a system. A customer has a business need, an expectation of
-          service and a perspective on what is important.
+          That distinction changes how technology teams listen, communicate, prioritise
+          and explain trade-offs. It also makes prioritisation a shared business decision
+          rather than an IT-owned queue.
         </p>
-
-        <p>
-          That distinction changes how technology teams listen, communicate and
-          prioritise.
-        </p>
-
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section">
       <div class="container">
-
         <p class="section-label">Prioritisation</p>
 
         <div class="section-heading">
           <h2>Technology priorities should not live only inside IT.</h2>
+          <p>
+            Good prioritisation makes trade-offs explicit and gives the business visibility
+            into why work is sequenced the way it is.
+          </p>
         </div>
 
         <div class="cards four">
-
           <article class="card">
             <h3>Business Value</h3>
             <p>
-              What outcome will the initiative create for customers, employees or the
-              organisation?
+              What outcome will the initiative create for customers, employees or the organisation?
             </p>
           </article>
 
           <article class="card">
             <h3>Risk</h3>
             <p>
-              What operational, cybersecurity, resilience or regulatory risk is being
-              reduced or accepted?
+              What operational, cybersecurity, resilience or regulatory risk is being reduced or accepted?
             </p>
           </article>
 
           <article class="card">
-            <h3>Cost & Capacity</h3>
+            <h3>Cost &amp; Capacity</h3>
             <p>
-              What investment, capability and organisational capacity are required?
+              What investment, capability, dependency and organisational capacity are required?
             </p>
           </article>
 
           <article class="card">
             <h3>Strategic Alignment</h3>
             <p>
-              Does the initiative support where the organisation is trying to go?
+              Does the initiative support the direction of the organisation and simplify the future state?
             </p>
           </article>
-
         </div>
-
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <div class="container narrow">
-
         <p class="section-label">Operating Philosophy</p>
 
         <h2>Reliable operations create strategic influence.</h2>
 
         <p>
           Technology strategy becomes difficult when the organisation does not trust
-          technology to deliver reliable services or manage change effectively.
+          technology to deliver reliable services or manage change effectively. Strategic
+          influence is usually earned through operational credibility first.
         </p>
 
-        <p>
-          For me, there is a natural progression:
-        </p>
+        <div class="trust-chain" aria-label="Technology trust progression">
+          <div>Reliable Service</div>
+          <div>Trust</div>
+          <div>Business Partnership</div>
+          <div>Strategic Influence</div>
+        </div>
+      </div>
+    </section>
 
-        <p class="large-copy">
-          Reliable Service → Trust → Business Partnership → Strategic Influence
-        </p>
+    <section id="selected-work" class="section leadership-work">
+      <div class="container">
+        <p class="section-label">Selected Leadership Work</p>
 
+        <div class="section-heading">
+          <h2>Practical examples of the operating model in action.</h2>
+          <p>
+            The material below focuses on recurring leadership decisions rather than
+            organisation-specific detail.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card project-card">
+            <p class="project-type">Technology Strategy · Transformation</p>
+            <h3>Transformation Roadmap &amp; Delivery</h3>
+            <p>
+              Translating business priorities into a multi-year roadmap across enterprise
+              applications, cloud, infrastructure, data, cybersecurity and customer technology.
+            </p>
+            <a href="https://github.com/rakeshranderia/technology-leadership-playbooks" target="_blank" rel="noopener">
+              Explore playbooks →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Business Partnership · Prioritisation</p>
+            <h3>Business-Led Technology</h3>
+            <p>
+              Moving from an IT-owned backlog to a shared decision model where value,
+              risk, sequencing and capacity are visible to business leaders.
+            </p>
+            <a href="https://github.com/rakeshranderia/technology-leadership-playbooks" target="_blank" rel="noopener">
+              Explore playbooks →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Technology Estate · Rationalisation</p>
+            <h3>Technology Estate Rationalisation</h3>
+            <p>
+              Simplifying systems, suppliers, licensing and support load while reducing
+              technical debt rather than merely moving it to a newer platform.
+            </p>
+            <a href="https://github.com/rakeshranderia/technology-leadership-playbooks/blob/main/docs/technology-estate-rationalisation.md" target="_blank" rel="noopener">
+              Read playbook →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Program Delivery · Go-Live</p>
+            <h3>When to Delay a Go-Live</h3>
+            <p>
+              Using readiness gates, transparent escalation and business outcomes to decide
+              when protecting a date creates more risk than changing it.
+            </p>
+            <a href="https://github.com/rakeshranderia/technology-leadership-playbooks/blob/main/docs/when-to-delay-a-go-live.md" target="_blank" rel="noopener">
+              Read playbook →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Enterprise Architecture · APIs</p>
+            <h3>Enterprise APIs</h3>
+            <p>
+              Treating APIs as architecture boundaries, security controls and operational
+              products rather than just integration code.
+            </p>
+            <a href="https://github.com/rakeshranderia/technology-leadership-playbooks/blob/main/docs/enterprise-apis-architecture-security-governance.md" target="_blank" rel="noopener">
+              Read playbook →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <p class="project-type">Operations · Resilience</p>
+            <h3>Major Incident &amp; Operational Resilience</h3>
+            <p>
+              Prioritised recovery, clear communication, business continuity, post-incident
+              learning and risk transfer as part of technology leadership.
+            </p>
+            <a href="resources.html">
+              Explore related resources →
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section alt">
-      <div class="container">
+      <div class="container narrow">
+        <p class="section-label">Leadership Principle</p>
 
-        <p class="section-label">Case Studies</p>
+        <h2>Governance should make decisions clearer, not slower.</h2>
 
-        <div class="cards">
+        <p>
+          I favour enough structure to make ownership, risk, sequencing and trade-offs visible,
+          while avoiding process for its own sake. The objective is not to remove ambiguity;
+          it is to make better decisions despite it.
+        </p>
 
-          <article class="card project-card">
-            <h3>Digital Transformation</h3>
-            <p>
-              A multi-year transformation spanning people, cloud, ERP, CRM, data,
-              infrastructure, security and customer experience.
-            </p>
-
-            <a
-              href="https://github.com/rakeshranderia/technology-leadership/blob/main/transformation/digital-transformation.md"
-              target="_blank"
-              rel="noopener"
-            >
-              Read case study →
-            </a>
-          </article>
-
-          <article class="card project-card">
-            <h3>Business-Led Technology</h3>
-            <p>
-              Shifting technology prioritisation from an IT-owned backlog toward a
-              regular business and technology decision-making cadence.
-            </p>
-
-            <a
-              href="https://github.com/rakeshranderia/technology-leadership/blob/main/business-partnering/business-led-technology.md"
-              target="_blank"
-              rel="noopener"
-            >
-              Read case study →
-            </a>
-          </article>
-
-          <article class="card project-card">
-            <h3>IT/OT</h3>
-            <p>
-              Managing technology where availability, production, cybersecurity and
-              human safety change the technology risk equation.
-            </p>
-
-            <a
-              href="https://github.com/rakeshranderia/technology-leadership/blob/main/itot/itot-operations.md"
-              target="_blank"
-              rel="noopener"
-            >
-              Read case study →
-            </a>
-          </article>
-
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/rakeshranderia/technology-leadership-playbooks" target="_blank" rel="noopener">
+            Technology Leadership Playbooks
+          </a>
+          <a class="button secondary" href="resources.html">
+            Explore Resources
+          </a>
         </div>
-
       </div>
     </section>
 
@@ -210,8 +420,10 @@
       <p>© Rakesh Randeria</p>
 
       <div class="footer-links">
-        <a href="https://github.com/rakeshranderia/technology-leadership" target="_blank" rel="noopener">Technology Leadership on GitHub</a>
-        <a href="playground.html">Playground</a>
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="writing.html">Writing</a>
+        <a href="https://github.com/rakeshranderia/technology-leadership-playbooks" target="_blank" rel="noopener">Leadership Playbooks</a>
       </div>
     </div>
   </footer>
